@@ -13,6 +13,7 @@
 		42CAF4901A9E408400BCE674 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42CAF48F1A9E408400BCE674 /* Images.xcassets */; };
 		42CAF4931A9E408400BCE674 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42CAF4911A9E408400BCE674 /* LaunchScreen.xib */; };
 		42CAF49F1A9E408400BCE674 /* cat_yearsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CAF49E1A9E408400BCE674 /* cat_yearsTests.swift */; };
+		42CAF4A91A9E428000BCE674 /* cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42CAF4A81A9E428000BCE674 /* cat.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		42CAF4981A9E408400BCE674 /* cat yearsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "cat yearsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42CAF49D1A9E408400BCE674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42CAF49E1A9E408400BCE674 /* cat_yearsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cat_yearsTests.swift; sourceTree = "<group>"; };
+		42CAF4A81A9E428000BCE674 /* cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cat.jpg; path = ../../../../Downloads/cat.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				42CAF4881A9E408400BCE674 /* AppDelegate.swift */,
 				42CAF48A1A9E408400BCE674 /* ViewController.swift */,
 				42CAF48C1A9E408400BCE674 /* Main.storyboard */,
+				42CAF4A81A9E428000BCE674 /* cat.jpg */,
 				42CAF48F1A9E408400BCE674 /* Images.xcassets */,
 				42CAF4911A9E408400BCE674 /* LaunchScreen.xib */,
 				42CAF4861A9E408400BCE674 /* Supporting Files */,
@@ -194,6 +197,7 @@
 			files = (
 				42CAF48E1A9E408400BCE674 /* Main.storyboard in Resources */,
 				42CAF4931A9E408400BCE674 /* LaunchScreen.xib in Resources */,
+				42CAF4A91A9E428000BCE674 /* cat.jpg in Resources */,
 				42CAF4901A9E408400BCE674 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
