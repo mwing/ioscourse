@@ -13,6 +13,8 @@
 		42CAF54A1AA339F600BCE674 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42CAF5491AA339F600BCE674 /* Images.xcassets */; };
 		42CAF54D1AA339F600BCE674 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42CAF54B1AA339F600BCE674 /* LaunchScreen.xib */; };
 		42CAF5591AA339F600BCE674 /* stopwatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CAF5581AA339F600BCE674 /* stopwatchTests.swift */; };
+		42CAF5631AA3436700BCE674 /* coin-drop-1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 42CAF5621AA3436700BCE674 /* coin-drop-1.wav */; };
+		42CAF5651AA3449100BCE674 /* tick.wav in Resources */ = {isa = PBXBuildFile; fileRef = 42CAF5641AA3449100BCE674 /* tick.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		42CAF5521AA339F600BCE674 /* stopwatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = stopwatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		42CAF5571AA339F600BCE674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42CAF5581AA339F600BCE674 /* stopwatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stopwatchTests.swift; sourceTree = "<group>"; };
+		42CAF5621AA3436700BCE674 /* coin-drop-1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "coin-drop-1.wav"; path = "../../../../Downloads/coin-drop-1.wav"; sourceTree = "<group>"; };
+		42CAF5641AA3449100BCE674 /* tick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = tick.wav; path = ../../../../Downloads/tick.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 				42CAF5461AA339F600BCE674 /* Main.storyboard */,
 				42CAF5491AA339F600BCE674 /* Images.xcassets */,
 				42CAF54B1AA339F600BCE674 /* LaunchScreen.xib */,
+				42CAF5641AA3449100BCE674 /* tick.wav */,
+				42CAF5621AA3436700BCE674 /* coin-drop-1.wav */,
 				42CAF5401AA339F600BCE674 /* Supporting Files */,
 			);
 			path = stopwatch;
@@ -192,6 +198,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42CAF5651AA3449100BCE674 /* tick.wav in Resources */,
+				42CAF5631AA3436700BCE674 /* coin-drop-1.wav in Resources */,
 				42CAF5481AA339F600BCE674 /* Main.storyboard in Resources */,
 				42CAF54D1AA339F600BCE674 /* LaunchScreen.xib in Resources */,
 				42CAF54A1AA339F600BCE674 /* Images.xcassets in Resources */,

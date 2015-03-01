@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -20,6 +21,7 @@ class ViewController: UIViewController {
         if counter >= 60 {
             counter = 0
             minutes++
+            playSound()
         }
         if minutes >= 60 {
             minutes = 0
@@ -28,6 +30,27 @@ class ViewController: UIViewController {
         label.text = "\(padded(hours)):\(padded(minutes)):\(padded(counter))"
     }
 
+    func playSound() {
+        if (alarm.on) {
+            minuteSound.play()
+        }
+    }
+    
+    var coinSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("coin-drop-1", ofType: "wav")!)
+    var tick = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("tick", ofType: "wav")!)
+    var minuteSound = AVAudioPlayer()
+    var ticking = AVAudioPlayer()
+    
+    @IBOutlet weak var alarm: UISwitch!
+    
+    @IBAction func alarmToggle(sender: AnyObject) {
+        if alarm.on && ticking.playing == false {
+            ticking.play()
+        } else if alarm.on == false && ticking.playing {
+            ticking.pause()
+        }
+    }
+    
     func padded(num:Int)->String {
         if num < 10 {
             return "0\(num)"
@@ -42,6 +65,7 @@ class ViewController: UIViewController {
     @IBAction func start(sender: AnyObject) {
         if timer.timeInterval == 0.0 {
             timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("result"), userInfo: nil, repeats: true)
+            if alarm.on { ticking.play() }
         }
     }
     
@@ -49,6 +73,7 @@ class ViewController: UIViewController {
         timer.invalidate()
         timer = NSTimer()
         resetCount()
+        ticking.pause()
     }
     
     func resetCount() {
@@ -67,16 +92,23 @@ class ViewController: UIViewController {
         if timer.timeInterval == 0.0 {
             timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("result"), userInfo: nil, repeats: true)
             pauseItem.title = "pause"
+            if (alarm.on) { ticking.play() }
         } else {
             timer.invalidate()
             timer = NSTimer()
             pauseItem.title = "resume"
+            if (alarm.on) { ticking.pause() }
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        minuteSound = AVAudioPlayer(contentsOfURL: coinSound, error: nil)
+        minuteSound.prepareToPlay()
+        ticking = AVAudioPlayer(contentsOfURL: tick, error: nil)
+        ticking.numberOfLoops = -1
+        ticking.prepareToPlay()
     }
     
     override func didReceiveMemoryWarning() {

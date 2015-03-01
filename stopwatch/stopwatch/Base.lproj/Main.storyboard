@@ -50,12 +50,35 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ef-Or-022">
-                                <rect key="frame" x="93" y="225" width="134" height="118"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ef-Or-022">
+                                <rect key="frame" x="76" y="225" width="168" height="118"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="44"/>
                                 <color key="textColor" red="0.96078437566757202" green="0.95686280727386475" blue="0.85490202903747559" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tow-Ky-jYj">
+                                <rect key="frame" x="46" y="130" width="228" height="52"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Play sounds" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94Y-gP-Bi4">
+                                        <rect key="frame" x="115" y="15" width="94" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cCi-pp-gD4">
+                                        <rect key="frame" x="33" y="10" width="51" height="31"/>
+                                        <color key="onTintColor" red="0.29329195604908836" green="0.083873711961508085" blue="0.79121291035353536" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="alarmToggle:" destination="vXZ-lx-hvc" eventType="valueChanged" id="dvW-xI-L6I"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" red="0.10644951283507118" green="0.030441734230437886" blue="0.28716856060606055" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="cCi-pp-gD4" firstAttribute="leading" secondItem="Tow-Ky-jYj" secondAttribute="leading" constant="33" id="0UX-Y1-Jgk"/>
+                                    <constraint firstItem="94Y-gP-Bi4" firstAttribute="leading" secondItem="cCi-pp-gD4" secondAttribute="trailing" constant="33" id="saP-i2-eY1"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.14117647707462311" green="0.078431375324726105" blue="0.35294118523597717" alpha="0.97999999999999998" colorSpace="deviceRGB"/>
                         <constraints>
@@ -64,6 +87,7 @@
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Qfd-pP-CBK" secondAttribute="bottom" id="2fX-cP-cMN"/>
                             <constraint firstAttribute="centerY" secondItem="3ef-Or-022" secondAttribute="centerY" id="HLn-eC-Mbc"/>
                             <constraint firstAttribute="centerX" secondItem="3ef-Or-022" secondAttribute="centerX" id="Ilz-PK-ZNk"/>
+                            <constraint firstAttribute="centerX" secondItem="Tow-Ky-jYj" secondAttribute="centerX" id="JqX-kl-Ekh"/>
                             <constraint firstItem="Qfd-pP-CBK" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="OFW-Vs-dmV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Qfd-pP-CBK" secondAttribute="trailing" constant="-16" id="WU3-ta-0ol"/>
                             <constraint firstItem="P5L-K8-oKB" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="r7l-D2-Qeq"/>
@@ -72,6 +96,7 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="alarm" destination="cCi-pp-gD4" id="yHF-ef-hVx"/>
                         <outlet property="label" destination="3ef-Or-022" id="8dF-XU-QZX"/>
                         <outlet property="pauseItem" destination="Kcw-UG-PYk" id="HM8-tN-UIH"/>
                     </connections>
