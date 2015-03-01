@@ -48,5 +48,20 @@ if x % 2 == 0 {
     println("\(x) is an odd number")
 }
 
+var ar = [2.0,4.0,6.0,9.0]
 
-var random = arc4random_uniform(5)
+for (i, x) in enumerate(ar) {
+    ar[i] = x / 2
+}
+println(ar)
+
+
+
+
+
+
+
+
+
+
+
